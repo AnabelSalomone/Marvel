@@ -44,10 +44,10 @@ export default {
       console.log(this.favorites.indexOf(item));
       console.log(this.favorites);
       if (this.favorites.indexOf(item) === -1) {
-        this.$toasted.show(`${item} added to favorites!`);
+        this.$toasted.show(`${item} added to favorites!`).goAway(1500);
         return this.favorites.push(item);
       } else {
-        this.$toasted.show(`${item} is already in favorites!`);
+        this.$toasted.show(`${item} is already in favorites!`).goAway(1500);
 
       }
     }
