@@ -9,7 +9,8 @@
     <div v-else>
       <ul class="list-group">
         <li class="list-group-item" v-for="item in apiData">
-          <router-link :to="{name:'Card' , params:{id:item.id}}">{{item.name}}
+          <router-link :to="{name:'Card' , params:{id:item.id}}">
+            {{item.name}}
           </router-link>
           <i class="material-icons" @click="addFav(item.name)" v-if="favorites.length < 5">favorite</i>
         </li>
@@ -27,6 +28,7 @@ export default {
   data() {
     return {
       apiData: [],
+      avatar: '',
       loaded: false,
       favorites: Store.datas.favorite
     }

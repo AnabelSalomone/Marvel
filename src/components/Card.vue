@@ -32,7 +32,6 @@ export default {
 		}
 	},
 	created() {
-		console.log("route params: ", this.$route.params.id);
 		Store.getDetail(this.$route.params.id).then((res) => {
 			this.char = res;
 			this.avatar = this.char.thumbnail.path + "/portrait_uncanny.jpg";

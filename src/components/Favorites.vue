@@ -5,12 +5,14 @@
 			<h3>My favorites</h3>
 		</header>
 	
-		<div>
+		<div v-if="favorites.length > 1">
 			<ul class="list-group">
 				<li class="list-group-item" v-for="item in favorites">{{item}}</li>
 				</li>
 			</ul>
 		</div>
+	
+		<div v-else class="msg">You haven't added any characters to your favorites</div>
 	</div>
 </template>
 
@@ -42,5 +44,9 @@ header {
 	text-align: center;
 	max-height: 60%;
 	max-width: 60%;
+}
+
+.msg {
+	text-align: center;
 }
 </style>
