@@ -1,6 +1,8 @@
 import axios from 'axios'
 export const Store = {
-
+  datas: {
+    favorite: []
+  },
   getData() {
     return axios.get('http://localhost:3000/').then((res) => {
       console.log("getData en Store: ", res.data.data.results);

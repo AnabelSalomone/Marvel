@@ -1,5 +1,5 @@
 <template>
-	<div v-if="!loaded">
+	<div v-if="!loaded" class="container">
 		Loading</div>
 	
 	<div v-else class="container">
@@ -51,3 +51,8 @@ export default {
 	}
 }
 </script>
+<style scoped>
+.container {
+	margin-top: 70px;
+}
+</style>

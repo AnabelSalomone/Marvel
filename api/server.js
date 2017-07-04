@@ -22,8 +22,7 @@ let PRIV_KEY = 'cadf71b843e7cb62c6564d37a00fce30ac9d68c5';
 
 let ts = new Date().getTime();
 let hash = crypto.createHash('md5').update(ts + PRIV_KEY + API_KEY).digest('hex');
-let offset = 100;
-let comicsurl = 'http://gateway.marvel.com/v1/public/characters?limit=5&offset=' + offset + '&ts=' + ts + '&apikey=' + API_KEY + '&hash=' + hash;
+let comicsurl = 'http://gateway.marvel.com/v1/public/characters?offset=100&ts=' + ts + '&apikey=' + API_KEY + '&hash=' + hash;
 
 app.get('/', (req, res) => {
 
