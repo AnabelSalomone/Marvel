@@ -17,8 +17,8 @@ logger('tiny')
 app.use(helmet());
 
 
-let API_KEY = '64eb0a3097c961bd7ae1c978b9e70a46';
-let PRIV_KEY = 'cadf71b843e7cb62c6564d37a00fce30ac9d68c5';
+let API_KEY = '';
+let PRIV_KEY = '';
 
 let ts = new Date().getTime();
 let hash = crypto.createHash('md5').update(ts + PRIV_KEY + API_KEY).digest('hex');
